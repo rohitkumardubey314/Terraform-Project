@@ -1,6 +1,6 @@
 module "my_docker_images" {
   source         = "../Custom_Module/artifact_registry"
-  repository_ids = ["frontend-app", "backend-app", "auth-service"]
+  repository_ids = ["frontend-app", "backend-app", "auth-service", "secret-service"]
   region         = "us-central1"
   format         = "DOCKER"
 }
