@@ -1,7 +1,8 @@
 resource "google_artifact_registry_repository" "my_repo" {
+  for_each      = toset(var.repository_ids)
   location      = var.region
-  repository_id = var.repository_id
-  description   = "Repository for our application images"
+  repository_id = each.value
+  description   = "Repository for ${each.value} application images"
   format        = var.format
 
 

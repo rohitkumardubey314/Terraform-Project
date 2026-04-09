@@ -1,6 +1,6 @@
-variable "repository_id" {
-  description = "The name of repository"
-  type        = string
+variable "repository_ids" {
+  description = "A list of repository names"
+  type        = list(string)
 }
 variable "region" {
   description = "GCP Region"
